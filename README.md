@@ -9,11 +9,10 @@ This is a mock website to show to our client to see about the MVP and if there i
 -   List look which displays more information in a table style
 -   Grid or list view the user can click on an item to show a popup to tell more about the item
 -   Grid/List Toggle to switch between the different views
+-   Search bar for filtering the items in grid and list view
 
 ## Working
 
--   Search bar
--   Dashboard Mobile View
 -   List View Mobile View (I'm gonna wait for a table design cause idk how to make a table for phone to look good XD)
 
 ## Moving from mockup to... production

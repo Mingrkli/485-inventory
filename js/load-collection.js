@@ -3,11 +3,19 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("../data/collection.json")
         .then((response) => response.json())
         .then((data) => {
+            // Selects the search bar
+            const searchInput = document.querySelector("#search-bar input");
+            // When the user types in the search bar, it will filters the items in both grid and list view in any of the category
+            searchInput.addEventListener("input", () => filterCollection(data));
+
+            // First load of the collection
             loadCollection(data, "grid");
+
             const switchView = document.getElementById("grid-list-toggle");
             const gridBtn = document.getElementById("grid-view");
             const listBtn = document.getElementById("list-view");
 
+            // Switches grid to list view and vice versa
             switchView.addEventListener("click", () => {
                 gridListToggle();
             });
@@ -26,6 +34,31 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch((error) => console.error("Error loading JSON:", error));
 });
+
+// Search bar for filtering the collection
+// =============================================================================
+const filterCollection = (data) => {
+    const query = document
+        .querySelector("#search-bar input")
+        .value.toLowerCase();
+
+    // with the data, each of the item values would be checked since we want the search bar to search everything
+    // we'll filter all the items not related to what is typed in the search bar
+    const filteredData = data.filter((item) =>
+        Object.values(item).some((value) =>
+            value.toString().toLowerCase().includes(query)
+        )
+    );
+
+    // We'll load the collection with that filtered data
+    // It's also will return the view in the right grid or list view
+    loadCollection(
+        filteredData,
+        document.getElementById("grid-view").classList.contains("active")
+            ? "grid"
+            : "list"
+    );
+};
 
 // Here we will start loading the collection ONLY if it pass the check of loading the collection.json.
 // =============================================================================
