@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Switches grid to list view and vice versa
             switchView.addEventListener("click", () => {
                 gridListToggle();
+                filterCollection(data);
             });
 
             // If pass, we'll also create a function in which toggles between grid and list view
