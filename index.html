@@ -3,60 +3,74 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>TBD</title>
-        <link rel="stylesheet" href="styles/main.css" />
-        <script src="js/load-collection.js" defer></script>
+        <title>Inventory Dashboard</title>
+        <link rel="stylesheet" href="/styles/main.css" />
+        <link rel="stylesheet" href="/styles/dashboard.css" />
     </head>
+    <body>
+        <div>
+            <h1>GRC Anthropology</h1>
+            <div class="dashboard">
+                <div class="dashboard-left">
+                    <div class="dashboard-top-left">
+                        <div class="total-artifacts">
+                            <h2>Total Artifacts</h2>
+                            <p>55</p>
+                        </div>
 
-    <body class="wrapper">
-        <h1>Welcome Title ...</h1>
+                        <div class="inventory">
+                            <h2>Inventory</h2>
 
-        <div id="search-bar">
-            <input type="text" placeholder="Search Bar" />
+                            <div class="inventory-btns">
+                                <a href="pages/view-page.html" class="view-btn"
+                                    >View</a
+                                >
+                                <a href="#" class="add-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
 
-            <div>
-                <button type="button">
-                    <img src="svg/search.svg" alt="Search Icon" />
-                </button>
+                    <div class="recent-additions">
+                        <h2>Recent Additions</h2>
 
-                <button id="grid-list-toggle" type="button">
-                    <img
-                        src="svg/grid.svg"
-                        alt="Grid Icon"
-                        id="grid-view"
-                        class="active"
-                    />
-                    <img
-                        src="svg/list.svg"
-                        alt="List Icon"
-                        id="list-view"
-                        class=""
-                    />
-                </button>
+                        <div class="recent-items">
+                            <div class="item">
+                                <img
+                                    src="img/img-not-found.png"
+                                    alt="Placeholder"
+                                />
+                                <p>Cast Of Homo Habilis Skull</p>
+                            </div>
+                            <div class="item">
+                                <img
+                                    src="img/img-not-found.png"
+                                    alt="Placeholder"
+                                />
+                                <p>Cast Of OH 24. 1.8 Million-Year-Old Skull</p>
+                            </div>
+                            <div class="item">
+                                <img
+                                    src="img/img-not-found.png"
+                                    alt="Placeholder"
+                                />
+                                <p>Cast Of Lower Jaw OH 14</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="categories">
+                    <h2>Categories</h2>
+
+                    <div class="pie-chart"></div>
+
+                    <div class="category-list">
+                        <p>Bones: 55</p>
+                        <p>Pottery: 25</p>
+                        <p>Tools: 10</p>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <section id="collection-items">
-            <!-- <button type="button" class="item">
-                <img src="img/img-not-found.png" alt="Image Not Found" />
-                <p>Name</p>
-            </button> -->
-        </section>
-
-        <!-- item-popup is connected to the collection-items as when a user clicks an item in the collection-items this popup will show up and tell the user more information about the item -->
-        <div id="item-popup" class="wrapper">
-            <!-- <header>
-                <h1>Name</h1>
-                <button type="button">
-                    <img src="svg/close.svg" alt="Close Button" />
-                </button>
-            </header>
-
-            <img src="img/img-not-found.png" alt="Image Not Found" />
-
-            <div>
-                <p>Description Here</p>
-            </div> -->
         </div>
     </body>
 </html>

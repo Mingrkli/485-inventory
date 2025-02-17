@@ -1,0 +1,171 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* Padding & Border Radius */
+.dashboard-top-left > div,
+.inventory-btns a,
+.recent-additions,
+.recent-items,
+.categories,
+.category-list {
+    padding: 1rem;
+
+    border-radius: 10px;
+}
+
+/* Dashboard
+============================================== */
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.dashboard-left {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dashboard-top-left {
+    display: flex;
+    gap: 1rem;
+}
+
+.dashboard-top-left > div {
+    flex: 1;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 2rem;
+
+    color: snow;
+    background: rgb(53, 49, 108);
+}
+
+/* total-artifacts
+============================================== */
+.total-artifacts p {
+    font-size: 5rem;
+    text-align: center;
+}
+
+/* inventory
+============================================== */
+
+.inventory-btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.inventory-btns a {
+    padding: 1rem 2rem;
+
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+}
+
+.inventory-btns .view-btn {
+    background: rgb(241, 244, 179);
+}
+
+.inventory-btns .add-btn {
+    background: rgb(93, 253, 247);
+}
+
+/* recent-additions
+============================================== */
+.recent-additions {
+    background: rgb(241, 244, 179);
+}
+
+.recent-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    background: white;
+}
+
+.recent-items .item {
+    width: 200px;
+}
+
+/* categories
+============================================== */
+.categories {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+
+    background: rgb(192, 192, 192);
+}
+
+.pie-chart {
+    width: 20rem;
+    aspect-ratio: 1/1;
+
+    border-radius: 50%;
+    background-image: conic-gradient(pink 70deg, lightblue 0 235deg, orange 0);
+}
+
+.category-list {
+    align-self: center;
+
+    width: fit-content;
+
+    background: white;
+}
+
+.category-list p {
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1033px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .categories {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    body {
+        height: 100%;
+
+        padding: 1rem 0;
+
+        text-align: center;
+    }
+
+    .dashboard-top-left {
+        flex-direction: column;
+    }
+
+    .recent-items {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .pie-chart {
+        width: 10rem;
+    }
+}

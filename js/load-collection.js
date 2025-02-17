@@ -1,6 +1,6 @@
 // We'll run and load the collection after the DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("data/collection.json")
+    fetch("../data/collection.json")
         .then((response) => response.json())
         .then((data) => {
             loadCollection(data, "grid");
@@ -105,7 +105,7 @@ const loadCollection = (data, view) => {
                 // image first in the row cause idk, I want to XD
                 const imgCell = document.createElement("td");
                 const img = document.createElement("img");
-                img.src = item.image || "img/img-not-found.png";
+                img.src = item.image || "../img/img-not-found.png";
                 img.alt = "Image Not Found";
                 img.classList.add("table-img");
                 imgCell.append(img);
@@ -199,7 +199,7 @@ const loadCollection = (data, view) => {
 
             // Creating the image element
             const img = document.createElement("img");
-            img.src = "img/img-not-found.png";
+            img.src = "../img/img-not-found.png";
             img.alt = "Image Not Found";
 
             // Creating the p element
@@ -240,7 +240,7 @@ const loadCollection = (data, view) => {
         closeButton.id = "close-popup";
 
         const closeImg = document.createElement("img");
-        closeImg.src = "svg/close.svg";
+        closeImg.src = "../svg/close.svg";
         closeImg.alt = "Close Button";
 
         closeButton.append(closeImg);
@@ -249,7 +249,7 @@ const loadCollection = (data, view) => {
 
         // Image
         const itemImg = document.createElement("img");
-        itemImg.src = item.image || "img/img-not-found.png";
+        itemImg.src = item.image || "../img/img-not-found.png";
         itemImg.alt = "Image Not Found";
 
         // Description
